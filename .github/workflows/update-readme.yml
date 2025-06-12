@@ -1,0 +1,27 @@
+name: Update Profile README
+
+on:
+  schedule:
+    - cron: '0 6 * * *'      # every day at 06:00 UTC
+  workflow_dispatch:       # also allow manual runs
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: true
+
+      - name: Run our README updater
+        uses: ./.github/../action
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add README.md
+          git commit -m "chore: update activity snippet" || echo "No changes to commit"
+          git push

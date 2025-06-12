@@ -1,0 +1,11 @@
+name: "Update Profile README"
+description: |
+  Fetch latest public events and inject into README.md
+author: StarbuckBarista
+inputs:
+  github_token:
+    description: "Automatically provided by GitHub"
+    required: true
+runs:
+  using: "node16"
+  main: "index.js"
