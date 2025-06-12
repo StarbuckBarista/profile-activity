@@ -1,0 +1,42 @@
+# 1. Node.js dependencies
+**/node_modules/
+
+# 2. Logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# 3. Runtime data
+pids
+*.pid
+*.seed
+
+# 4. OS / Editor cruft
+.DS_Store
+Thumbs.db
+
+# 5. Environment files
+.env
+.env.*.local
+
+# 6. Coverage reports (if you ever add testing)
+coverage/
+
+# 7. Build output (if you add transpilation in future)
+dist/
+build/
+
+# 8. VSCode settings
+.vscode/
+
+# 9. Docker / container artifacts (if you ever add a container Action)
+**/Dockerfile.*
+**/.dockerignore
+
+# 10. act runner cache (optional, if you use nektos/act locally)
+.act/
+
+# 11. Mac/Linux swap or temp files
+*~
+*.swp
