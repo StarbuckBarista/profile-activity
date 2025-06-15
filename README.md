@@ -1,7 +1,7 @@
 <!-- ACTIVITY_START -->
-- <img src="assets/badges/pushed.svg" width="32" height="32" style="vertical-align: middle; margin-right: 8px;" /> Pushed 2 commits to [StarbuckBarista/StarbuckBarista](https://api.github.com/repos/StarbuckBarista/StarbuckBarista)
-- <img src="assets/badges/pushed.svg" width="32" height="32" style="vertical-align: middle; margin-right: 8px;" /> Pushed 33 commits to [FIRST1939/Reefscape2025](https://api.github.com/repos/FIRST1939/Reefscape2025)
-- <img src="assets/badges/pr_merged.svg" width="32" height="32" style="vertical-align: middle; margin-right: 8px;" /> Closed [Pull Request #24](https://github.com/FIRST1939/Reefscape2025/pull/24) in [FIRST1939/Reefscape2025](https://api.github.com/repos/FIRST1939/Reefscape2025)
-- <img src="assets/badges/pr_opened.svg" width="32" height="32" style="vertical-align: middle; margin-right: 8px;" /> Opened [Pull Request #24](https://github.com/FIRST1939/Reefscape2025/pull/24) in [FIRST1939/Reefscape2025](https://api.github.com/repos/FIRST1939/Reefscape2025)
+- <img src="assets/badges/pushed.svg" width="32" height="32" style="vertical-align: middle; margin: 8px 8px 8px 0px;" /> Pushed 2 commits to [StarbuckBarista/StarbuckBarista](https://api.github.com/repos/StarbuckBarista/StarbuckBarista)
+- <img src="assets/badges/pushed.svg" width="32" height="32" style="vertical-align: middle; margin: 8px 8px 8px 0px;" /> Pushed 33 commits to [FIRST1939/Reefscape2025](https://api.github.com/repos/FIRST1939/Reefscape2025)
+- <img src="assets/badges/pr_merged.svg" width="32" height="32" style="vertical-align: middle; margin: 8px 8px 8px 0px;" /> Closed [Pull Request #24](https://github.com/FIRST1939/Reefscape2025/pull/24) in [FIRST1939/Reefscape2025](https://api.github.com/repos/FIRST1939/Reefscape2025)
+- <img src="assets/badges/pr_opened.svg" width="32" height="32" style="vertical-align: middle; margin: 8px 8px 8px 0px;" /> Opened [Pull Request #24](https://github.com/FIRST1939/Reefscape2025/pull/24) in [FIRST1939/Reefscape2025](https://api.github.com/repos/FIRST1939/Reefscape2025)
 
 <!-- ACTIVITY_END -->
