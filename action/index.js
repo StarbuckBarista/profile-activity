@@ -133,6 +133,7 @@ async function run () {
             }
         }
 
+        merged = merged.slice(0, 10);
         readme = `${before}${startMarker}\n${merged.join('\n\n')}\n${endMarker}${after}`;
         fs.writeFileSync(readmePath, readme);
     } catch (error) {
