@@ -2,19 +2,24 @@ name: Update Profile README
 
 on:
   schedule:
-    - cron: '0 6 * * *'      # every day at 06:00 UTC
-  workflow_dispatch:       # also allow manual runs
+    - cron: '0 6 * * *'
+  workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out repo
+        uses: actions/checkout@v3
         with:
-          persist-credentials: true
+          fetch-depth: 0
 
-      - name: Run our README updater
-        uses: ./.github/../action
+      - name: Install Action dependencies
+        working-directory: ./action
+        run: npm ci
+
+      - name: Run README updater
+        uses: ./action
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
