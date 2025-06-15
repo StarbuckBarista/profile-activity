@@ -100,7 +100,7 @@ async function run () {
             content.push(`<img src="https://raw.githubusercontent.com/StarbuckBarista/profile-activity/refs/heads/master/${icon}" width="24" height="24" valign="bottom"/>&nbsp; ${description}`);
         }
 
-        const readmePath = path.join(__dirname, '..', 'README.md');
+        const readmePath = path.join(process.cwd(), 'README.md');
         let readme = fs.readFileSync(readmePath, 'utf8');
 
         const startMarker = '<!-- ACTIVITY_START -->';
