@@ -97,7 +97,7 @@ async function run () {
             }
 
             if (!icon || !description) continue;
-            content.push(`- <img src="https://raw.githubusercontent.com/StarbuckBarista/profile-activity/refs/heads/master/${icon}" width="28" height="28" style="vertical-align: middle; margin: 8px; margin-left: 0px" /> <span style="font-size: 14px;">${description}</span>`);
+            content.push(`<img src="https://raw.githubusercontent.com/StarbuckBarista/profile-activity/refs/heads/master/${icon}" width="24" height="24" valign="bottom"/>&nbsp; ${description}`);
         }
 
         const readmePath = path.join(__dirname, '..', 'README.md');
@@ -110,7 +110,7 @@ async function run () {
         const after  = readme.split(endMarker)[1];
 
         const previousBlock = readme.split(startMarker)[1].split(endMarker)[0].trim();
-        const previousLines = previousBlock.split('\n');
+        const previousLines = previousBlock.split('\n\n');
 
         const seen = new Set();
         const merged = [];
@@ -133,7 +133,7 @@ async function run () {
             }
         }
 
-        readme = `${before}${startMarker}\n${merged.join('\n')}\n${endMarker}${after}`;
+        readme = `${before}${startMarker}\n${merged.join('\n\n')}\n${endMarker}${after}`;
         fs.writeFileSync(readmePath, readme);
     } catch (error) {
 
