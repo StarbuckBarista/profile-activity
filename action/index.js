@@ -97,7 +97,7 @@ async function run () {
             }
 
             if (!icon || !description) continue;
-            content.push(`- <img src="${icon}" width="28" height="28" style="vertical-align: middle; margin: 8px; margin-left: 0px" /> <span style="font-size: 14px;">${description}</span>`);
+            content.push(`- <img src="https://raw.githubusercontent.com/StarbuckBarista/profile-activity/refs/heads/master/${icon}" width="28" height="28" style="vertical-align: middle; margin: 8px; margin-left: 0px" /> <span style="font-size: 14px;">${description}</span>`);
         }
 
         const readmePath = path.join(__dirname, '..', 'README.md');
