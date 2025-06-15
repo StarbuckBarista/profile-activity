@@ -9,24 +9,24 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repo
+      - name: Checkout Repo
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Install Action dependencies
+      - name: Install Action Dependencies
         working-directory: ./action
         run: npm ci
 
-      - name: Run README updater
+      - name: Run README Updater
         uses: ./action
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit changes
+      - name: Commit Changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "actions@github.com"
           git add README.md
-          git commit -m "chore: update activity snippet" || echo "No changes to commit"
+          git commit -m "Chore: Update Activity" || echo "No Changes to Commit"
           git push
