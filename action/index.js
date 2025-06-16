@@ -22,8 +22,7 @@ async function run () {
         const interesting = new Set([
             'PushEvent',
             'PullRequestEvent',
-            'IssuesEvent',
-            'IssueCommentEvent'
+            'IssuesEvent'
         ]);
 
         const filtered = allEvents
@@ -52,7 +51,7 @@ async function run () {
                 }
 
                 icon = 'assets/badges/pushed.svg';
-                description = `Pushed ${commits} commit${commits > 1 ? 's' : ''} to [${event.repo.name}](${event.repo.url})`;
+                description = `Pushed ${commits} commit${commits > 1 ? 's' : ''} to [${event.repo.name}](https://github.com/${event.repo.name})`;
             } else {
 
                 i++;
@@ -70,7 +69,7 @@ async function run () {
                         icon = 'assets/badges/pr_closed.svg';
                     }
 
-                    description = `${event.payload.action.charAt(0).toUpperCase() + event.payload.action.slice(1)} [Pull Request #${event.payload.pull_request.number}](${event.payload.pull_request.html_url}) in [${event.repo.name}](${event.repo.url})`;
+                    description = `${event.payload.action.charAt(0).toUpperCase() + event.payload.action.slice(1)} [Pull Request #${event.payload.pull_request.number}](${event.payload.pull_request.html_url}) in [${event.repo.name}](https://github.com/${event.repo.name})`;
                 } else if (event.type === 'IssuesEvent') {
 
                     if (event.payload.action === 'opened') {
@@ -84,15 +83,7 @@ async function run () {
                         icon = 'assets/badges/issue_reopened.svg';
                     }
 
-                    description = `${event.payload.action.charAt(0).toUpperCase() + event.payload.action.slice(1)} [Issue #${event.payload.issue.number}](${event.payload.issue.html_url}) in [${event.repo.name}](${event.repo.url})`;
-                } else if (event.type === 'IssueCommentEvent') {
-
-                    if (event.payload.action === 'created') {
-
-                        icon = 'assets/badges/commented.svg';
-                    }
-
-                    description = `Commented on [Issue #${event.payload.issue.number}](${event.payload.issue.html_url}) in [${event.repo.name}](${event.repo.url})`;
+                    description = `${event.payload.action.charAt(0).toUpperCase() + event.payload.action.slice(1)} [Issue #${event.payload.issue.number}](${event.payload.issue.html_url}) in [${event.repo.name}](https://github.com/${event.repo.name})`;
                 }
             }
 
