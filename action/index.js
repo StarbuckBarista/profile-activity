@@ -113,7 +113,7 @@ async function run () {
         const previousLines = previousBlock.split('\n\n');
 
         const seen = new Set();
-        const merged = [];
+        let merged = [];
 
         for (const line of content) {
 
